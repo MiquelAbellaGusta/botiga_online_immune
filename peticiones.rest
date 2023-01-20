@@ -1,0 +1,35 @@
+@hostname=http://localhost
+@port=3000
+@url={{hostname}}:{{port}}
+
+###
+GET {{url}}/api/products
+
+
+###
+GET {{url}}/api/products/63c67e74a7b10aacf923226f
+
+###
+POST {{url}}/api/products
+Content-Type: application/json
+
+{
+"name": "botes seguretat",
+    "description": "Botes de seguretat negres",
+    "price": 65,
+    "department": "Magatzem",
+    "stock": 120,
+    "available": true
+}
+
+###
+PUT {{url}}/api/products/63c67e74a7b10aacf923226f
+Content-Type: application/json
+
+{
+    "stock":50
+}
+
+###
+DELETE {{url}}/api/products/63c67e74a7b10aacf923226f
+
